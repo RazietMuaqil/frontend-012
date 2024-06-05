@@ -11,13 +11,13 @@ const UserList = () => {
     }, []);
 
     const getUsers = async () => {
-        const response = await axios.get('http://localhost:5000/users');
+        const response = await axios.get('https://manajamen-backend-cvbl6cy73a-et.a.run.app/users');
         setUser(response.data);
     };
 
     const deleteUser = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/users/${id}`);
+            await axios.delete(`https://manajamen-backend-cvbl6cy73a-et.a.run.app/users/${id}`);
             getUsers();
         } catch (error) {
             console.log(error);

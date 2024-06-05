@@ -11,7 +11,7 @@ const AddUser = () => {
     const saveUser = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/users', {
+            await axios.post('https://manajamen-backend-cvbl6cy73a-et.a.run.app/users', {
                 name,
                 email,
                 gender

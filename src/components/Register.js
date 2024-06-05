@@ -12,7 +12,7 @@ const Register = () => {
     const Register = async(e) =>{
          e.preventDefault();
          try {
-            await axios.post('http://localhost:5000/akun',{
+            await axios.post('https://manajamen-backend-cvbl6cy73a-et.a.run.app/akun',{
                 username: username,
                 password: password,
                 confPassword: confPassword
