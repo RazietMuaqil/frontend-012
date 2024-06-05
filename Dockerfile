@@ -16,8 +16,11 @@ COPY . .
 # Build the React application
 RUN npm run build
 
-# Stage 2: Serve the React application using Node.js
-FROM node:18 AS serve
+# Stage 2: Serve the React application using serve
+FROM node:18-alpine
+
+# Install serve globally
+RUN npm install -g serve
 
 # Set the working directory
 WORKDIR /app
@@ -25,8 +28,8 @@ WORKDIR /app
 # Copy the built React application from the previous stage
 COPY --from=build /app/build ./build
 
-# Expose the port that Node.js will run on
-EXPOSE 3000
+# Expose the port that serve will run on
+EXPOSE 8080
 
 # Command to run the React application
-CMD ["npm", "start"]
+CMD ["serve", "-s", "build", "-l", "8080"]

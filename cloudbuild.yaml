@@ -17,3 +17,6 @@ steps:
         'managed',
         '--allow-unauthenticated',
       ]
+
+images:
+  - 'gcr.io/$PROJECT_ID/manajemen-frontend'
