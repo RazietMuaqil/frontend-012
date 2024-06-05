@@ -19,5 +19,5 @@ steps:
       ]
 
 images:
-  - 'gcr.io/$PROJECT_ID/manajemen-frontend'
+  - 'gcr.io/$PROJECT_ID/manajemen-frontend'   
   
