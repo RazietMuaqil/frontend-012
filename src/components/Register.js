@@ -12,7 +12,7 @@ const Register = () => {
     const Register = async(e) =>{
          e.preventDefault();
          try {
-            await axios.post('https://manajamen-backend-cvbl6cy73a-et.a.run.app/akun',{
+            await axios.post('https://praktcc-012-033.et.r.appspot.com/akun',{
                 username: username,
                 password: password,
                 confPassword: confPassword

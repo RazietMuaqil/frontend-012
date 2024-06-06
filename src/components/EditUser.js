@@ -16,7 +16,7 @@ const EditUser = () => {
     const updateUser = async (e) => {
         e.preventDefault();
         try {
-            await axios.patch(`https://manajamen-backend-cvbl6cy73a-et.a.run.app/users/${id}`, {
+            await axios.patch(`https://praktcc-012-033.et.r.appspot.com/users/${id}`, {
                 name,
                 email,
                 gender
@@ -29,7 +29,7 @@ const EditUser = () => {
 
     const getUserById = async () => {
         try {
-            const response = await axios.get(`https://manajamen-backend-cvbl6cy73a-et.a.run.app/users/${id}`);
+            const response = await axios.get(`https://praktcc-012-033.et.r.appspot.com/users/${id}`);
             setName(response.data.name);
             setEmail(response.data.email);
             setGender(response.data.gender);

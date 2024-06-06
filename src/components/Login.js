@@ -11,7 +11,7 @@ const Login = () => {
     const Auth = async(e) =>{
         e.preventDefault();
         try {
-           await axios.post('https://manajamen-backend-cvbl6cy73a-et.a.run.app/login',{
+           await axios.post('https://praktcc-012-033.et.r.appspot.com/login',{
                 username: username,
                 password: password
            });

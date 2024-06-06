@@ -11,13 +11,13 @@ const UserList = () => {
     }, []);
 
     const getUsers = async () => {
-        const response = await axios.get('https://manajamen-backend-cvbl6cy73a-et.a.run.app/users');
+        const response = await axios.get('https://praktcc-012-033.et.r.appspot.com/users');
         setUser(response.data);
     };
 
     const deleteUser = async (id) => {
         try {
-            await axios.delete(`https://manajamen-backend-cvbl6cy73a-et.a.run.app/users/${id}`);
+            await axios.delete(`https://praktcc-012-033.et.r.appspot.com/users/${id}`);
             getUsers();
         } catch (error) {
             console.log(error);
